@@ -13,9 +13,14 @@
 		90B1E0901D610AA000E49C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90B1E08E1D610AA000E49C52 /* Main.storyboard */; };
 		90B1E0921D610AA000E49C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B1E0911D610AA000E49C52 /* Assets.xcassets */; };
 		90B1E0951D610AA000E49C52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90B1E0931D610AA000E49C52 /* LaunchScreen.storyboard */; };
+		90B1E0A11D61146B00E49C52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90B1E0A01D61146B00E49C52 /* GoogleService-Info.plist */; };
+		E952D66FD9E446323D793C96 /* libPods-FBRunTransactionBlockPra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4265B09C5E069AD635A027F3 /* libPods-FBRunTransactionBlockPra.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141FAABAC002A13FA8EB297D /* Pods-FBRunTransactionBlockPra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBRunTransactionBlockPra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBRunTransactionBlockPra/Pods-FBRunTransactionBlockPra.debug.xcconfig"; sourceTree = "<group>"; };
+		27184C313D0744B98BAA0C49 /* Pods-FBRunTransactionBlockPra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBRunTransactionBlockPra.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBRunTransactionBlockPra/Pods-FBRunTransactionBlockPra.release.xcconfig"; sourceTree = "<group>"; };
+		4265B09C5E069AD635A027F3 /* libPods-FBRunTransactionBlockPra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBRunTransactionBlockPra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B1E0821D610AA000E49C52 /* FBRunTransactionBlockPra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBRunTransactionBlockPra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B1E0861D610AA000E49C52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90B1E0881D610AA000E49C52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		90B1E0911D610AA000E49C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90B1E0941D610AA000E49C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90B1E0961D610AA000E49C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90B1E0A01D61146B00E49C52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E952D66FD9E446323D793C96 /* libPods-FBRunTransactionBlockPra.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37D9C7DC8A30891B08DC0EA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				141FAABAC002A13FA8EB297D /* Pods-FBRunTransactionBlockPra.debug.xcconfig */,
+				27184C313D0744B98BAA0C49 /* Pods-FBRunTransactionBlockPra.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		39B8FD6FD371B00760E242F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4265B09C5E069AD635A027F3 /* libPods-FBRunTransactionBlockPra.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90B1E0791D610AA000E49C52 = {
 			isa = PBXGroup;
 			children = (
 				90B1E0841D610AA000E49C52 /* FBRunTransactionBlockPra */,
 				90B1E0831D610AA000E49C52 /* Products */,
+				37D9C7DC8A30891B08DC0EA1 /* Pods */,
+				39B8FD6FD371B00760E242F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +84,7 @@
 		90B1E0841D610AA000E49C52 /* FBRunTransactionBlockPra */ = {
 			isa = PBXGroup;
 			children = (
+				90B1E0A01D61146B00E49C52 /* GoogleService-Info.plist */,
 				90B1E0881D610AA000E49C52 /* AppDelegate.h */,
 				90B1E0891D610AA000E49C52 /* AppDelegate.m */,
 				90B1E08B1D610AA000E49C52 /* ViewController.h */,
@@ -86,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90B1E0991D610AA000E49C52 /* Build configuration list for PBXNativeTarget "FBRunTransactionBlockPra" */;
 			buildPhases = (
+				3940BEE7EBAEFCF687FBC362 /* [CP] Check Pods Manifest.lock */,
 				90B1E07E1D610AA000E49C52 /* Sources */,
 				90B1E07F1D610AA000E49C52 /* Frameworks */,
 				90B1E0801D610AA000E49C52 /* Resources */,
+				20A8844C15D14A01DBA44649 /* [CP] Embed Pods Frameworks */,
+				B420CBA586CAD59C3B9D900F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,12 +167,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B1E0951D610AA000E49C52 /* LaunchScreen.storyboard in Resources */,
+				90B1E0A11D61146B00E49C52 /* GoogleService-Info.plist in Resources */,
 				90B1E0921D610AA000E49C52 /* Assets.xcassets in Resources */,
 				90B1E0901D610AA000E49C52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20A8844C15D14A01DBA44649 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBRunTransactionBlockPra/Pods-FBRunTransactionBlockPra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3940BEE7EBAEFCF687FBC362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B420CBA586CAD59C3B9D900F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBRunTransactionBlockPra/Pods-FBRunTransactionBlockPra-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90B1E07E1D610AA000E49C52 /* Sources */ = {
@@ -261,6 +340,7 @@
 		};
 		90B1E09A1D610AA000E49C52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 141FAABAC002A13FA8EB297D /* Pods-FBRunTransactionBlockPra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FBRunTransactionBlockPra/Info.plist;
@@ -272,6 +352,7 @@
 		};
 		90B1E09B1D610AA000E49C52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27184C313D0744B98BAA0C49 /* Pods-FBRunTransactionBlockPra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FBRunTransactionBlockPra/Info.plist;
@@ -300,6 +381,7 @@
 				90B1E09B1D610AA000E49C52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
