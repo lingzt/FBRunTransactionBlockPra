@@ -29,23 +29,12 @@ FIRDatabaseReference *ref;
 
 
 -(void)loginUserToFirebase{
-    NSString *newPwd = @"111111";
     [[FIRAuth auth] signInWithEmail:@"ling@gmail.com"
-                           password:newPwd
+                           password:@"111111"
                          completion:^(FIRUser *user, NSError *error) {
-                             
                              if (error) {
-                                 NSString *message=@"Invalid email or password";
-                                 NSString *alertTitle=@"Invalid!";
-                                 NSString *OKText=@"OK";
-                                 
-                                 UIAlertController *alertView = [UIAlertController alertControllerWithTitle:alertTitle message:message preferredStyle:UIAlertControllerStyleAlert];
-                                 UIAlertAction *alertAction = [UIAlertAction actionWithTitle:OKText style:UIAlertActionStyleCancel handler:nil];
-                                 [alertView addAction:alertAction];
-                                 [self presentViewController:alertView animated:YES completion:nil];
                              }else{
                                  NSLog(@"Login success!!!!!!!!!!!!");
-                                 
                              }
                          }];
 }
@@ -71,7 +60,6 @@ FIRDatabaseReference *ref;
             }
         }
         return [FIRTransactionResult successWithValue:currentData];
-        
     }];
 }
 
