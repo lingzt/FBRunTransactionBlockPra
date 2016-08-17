@@ -12,6 +12,7 @@
 @import FirebaseDatabase;
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
 @end
 
@@ -21,13 +22,16 @@ FIRDatabaseReference *ref;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loginUserToFirebase];
     ref = [[FIRDatabase database]reference];
 }
+- (IBAction)login:(id)sender {
+    [self loginUserToFirebase];
+}
+
 
 -(void)loginUserToFirebase{
     NSString *newPwd = @"111111";
-    [[FIRAuth auth] signInWithEmail:@"ling@gmail.com"
+    [[FIRAuth auth] signInWithEmail:_emailTextField.text
                            password:newPwd
                          completion:^(FIRUser *user, NSError *error) {
                              
@@ -46,16 +50,29 @@ FIRDatabaseReference *ref;
                              }
                          }];
 }
-- (IBAction)signOutBtnPressed:(id)sender {
-    NSError *error;
-    [[FIRAuth auth] signOut:&error];
-    if (!error) {
-        
-    }
+
+
+- (IBAction)addCount:(id)sender {
+    [self addCount];
 }
 
 - (IBAction)likePost:(id)sender {
     [self likeThePost];
+}
+
+
+-(void)addCount{
+    FIRDatabaseReference *counterRef;
+    counterRef = [ref child:@"counter"];
+    [counterRef runTransactionBlock:^FIRTransactionResult * _Nonnull(FIRMutableData * _Nonnull currentData) {
+        id count = currentData.value;
+        if (count == [NSNull null]) {
+            count = 0;
+        }
+        currentData.value = @([count integerValue] +1);
+        return [FIRTransactionResult successWithValue:currentData];
+        
+    }];
 }
 
 -(void)likeThePost{
@@ -77,8 +94,12 @@ FIRDatabaseReference *ref;
             [stars removeObjectForKey:uid];
         } else {
             // Star the post and add self to stars
-            starCount++;
-            stars[uid] = @YES;
+            
+            for (int i=0; i<100000; i++) {
+                starCount++;
+                stars[uid] = @YES;
+                NSLog(@"the current starCount is %d",starCount);
+            }
         }
         post[@"stars"] = stars;
         post[@"starCount"] = [NSNumber numberWithInt:starCount];

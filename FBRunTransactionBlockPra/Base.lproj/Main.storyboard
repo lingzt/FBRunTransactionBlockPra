@@ -37,15 +37,71 @@
                                 </constraints>
                                 <state key="normal" title="SignOut"/>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fln-6d-FZg">
+                                <rect key="frame" x="25" y="174" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LFi-68-A9G"/>
+                                    <constraint firstAttribute="width" constant="83" id="w6C-0r-qSo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRX-B6-8tw">
+                                <rect key="frame" x="43" y="222" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NZg-zc-eAw"/>
+                                    <constraint firstAttribute="width" constant="46" id="iRs-el-iX1"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vE5-1h-6cn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LU-2s-OZ6">
+                                <rect key="frame" x="30" y="285" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3VX-6x-Cln"/>
+                                    <constraint firstAttribute="width" constant="46" id="VD1-B0-1Tu"/>
+                                    <constraint firstAttribute="width" constant="73" id="j49-i6-aX1"/>
+                                    <constraint firstAttribute="height" constant="30" id="x1h-GI-2sq"/>
+                                </constraints>
+                                <state key="normal" title="Add Count"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VD1-B0-1Tu"/>
+                                        <exclude reference="x1h-GI-2sq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="addCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lwh-ek-0kL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="JRX-B6-8tw" firstAttribute="top" secondItem="fln-6d-FZg" secondAttribute="bottom" constant="18" id="9TC-5T-8y5"/>
                             <constraint firstItem="7MH-f7-1Xm" firstAttribute="top" secondItem="myv-c1-bdl" secondAttribute="bottom" constant="21" id="FII-hP-DHv"/>
+                            <constraint firstItem="6LU-2s-OZ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="JxJ-Yy-0gv"/>
+                            <constraint firstItem="6LU-2s-OZ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="ONN-ug-OV9"/>
                             <constraint firstItem="7MH-f7-1Xm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="Rqn-hv-le4"/>
+                            <constraint firstItem="6LU-2s-OZ6" firstAttribute="top" secondItem="JRX-B6-8tw" secondAttribute="bottom" constant="33" id="eUq-do-Vxn"/>
+                            <constraint firstItem="fln-6d-FZg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="iUq-ng-8n8"/>
+                            <constraint firstItem="fln-6d-FZg" firstAttribute="top" secondItem="7MH-f7-1Xm" secondAttribute="bottom" constant="18" id="j3O-6x-jsG"/>
                             <constraint firstItem="myv-c1-bdl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="l1G-Gm-2vM"/>
                             <constraint firstItem="myv-c1-bdl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="pBq-t2-feV"/>
+                            <constraint firstItem="JRX-B6-8tw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="qCx-CA-Dgw"/>
+                            <constraint firstItem="6LU-2s-OZ6" firstAttribute="top" secondItem="JRX-B6-8tw" secondAttribute="bottom" constant="33" id="wPF-qp-37l"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ONN-ug-OV9"/>
+                                <exclude reference="wPF-qp-37l"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="fln-6d-FZg" id="FFn-5E-43T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
