@@ -68,8 +68,10 @@ FIRDatabaseReference *ref;
         id count = currentData.value;
         if (count == [NSNull null]) {
             count = 0;
+        }else{
+            currentData.value = @([count integerValue] +1);
         }
-        currentData.value = @([count integerValue] +1);
+        
         return [FIRTransactionResult successWithValue:currentData];
         
     }];
